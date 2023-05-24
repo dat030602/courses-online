@@ -1,0 +1,36 @@
+.wrapper {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    width: 98px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 16px 12px;
+}
+
+.btn-sidebar {
+    width: 80px;
+    min-width: 80px;
+    min-height: 70px;
+    background-color: transparent;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 8px;
+    border-radius: 12px;
+    width: 100%;
+    &:hover {
+        background-color: rgba(204, 204, 204, 0.5);
+    }
+    & p{
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+}
+
+.icon {
+    height: 16px;
+    // padding: 16px;
+    // border-radius: 12px;
+    // width: 100%;
+}

@@ -1,0 +1,14 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+.wrapper {
+}
+.slide {
+    width: 100%;
+    height: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    & > .slide-item {
+        width: 100%;
+        height: 100%;
+    }
+}

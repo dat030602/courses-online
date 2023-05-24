@@ -1,0 +1,152 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+.wrapper {
+    display: inline-flex;
+    & h2 {
+        font-size: 3rem;
+        line-height: 6rem;
+        font-weight: 600;
+    }
+    & .icon {
+        width: 12.25px;
+        color: var(--primary);
+        margin-right: 8px;
+    }
+    & li,
+    & p,
+    & span,
+    & .stage-title {
+        margin-bottom: 16px;
+        line-height: 2rem;
+    }
+}
+.about-list {
+    width: 100%;
+}
+.about-item {
+    width: 50%;
+    display: inline-block;
+}
+.about-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.info-course {
+    width: 100%;
+}
+.stage {
+}
+.info-stage-item,
+.stage-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px 14px 48px;
+}
+.stage-title {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    & p,
+    & span {
+        margin: 0;
+    }
+    & > span:first-child {
+        font-weight: 600;
+    }
+    &::before {
+        color: var(--primary);
+        content: '+';
+        font-size: 26px;
+        font-weight: 300;
+        left: 20px;
+        position: absolute;
+        top: 48%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+.info-stage {
+    transition: height 0.3s ease-in;
+    height: 0;
+    overflow: hidden;
+    max-height: 100000px;
+}
+.dl-ib {
+    display: inline-block;
+}
+.video-demo {
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    & > div {
+        width: 100%;
+        height: 100%;
+    }
+}
+.video-demo-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-play,
+.video-demo-text {
+    color: var(--white);
+}
+.icon-play {
+    height: 70px;
+}
+.video-demo-text {
+}
+.text-full-width {
+    width: 100%;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    color: var(--primary);
+    text-align: center;
+    padding: 16px 0;
+}
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-submit {
+    color: var(--white) !important;
+    background-color: var(--primary) !important;
+    border-radius: 24px;
+    padding: 12px 42px !important;
+}
+.about-course {
+    padding-left: 32px;
+}
+.modal {
+    width: 100%;
+    height: calc(100% - 80px);
+}
+.modal-content {
+    position: relative;
+    & > h4 {
+        position: absolute;
+        top: -32px;
+        left: 0;
+        font-size: 2.3rem;
+    }
+    & > h5 {
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+}
+.video-show {
+    width: 100%;
+    height: 100%;
+}
+.video {
+    width: 100%;
+    height: 100%;
+}

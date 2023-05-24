@@ -1,0 +1,80 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 99;
+}
+header,
+.wrapper,
+.navbar {
+    height: 52px;
+}
+.wrapper {
+    background-color: #535353;
+    & a,
+    & .btn-notify,
+    & .title {
+        background-color: transparent !important;
+    }
+    & .name-course,
+    & .icon-logo,
+    & p,
+    & span {
+        color: var(--white);
+    }
+}
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar,
+.logo,
+.actions {
+    display: flex;
+}
+.logo,
+.actions {
+    width: 50%;
+    min-width: 250px;
+}
+.actions {
+    justify-content: right;
+}
+.icon {
+    height: 36px;
+    color: var(--white);
+}
+.btn-notify {
+    width: 36px;
+    min-width: 36px !important;
+}
+.title {
+    align-items: center;
+    display: flex;
+    & button {
+        color: var(--white);
+    }
+}
+.arrow {
+    transform: rotate(-90deg);
+    width: 16px;
+    height: auto;
+}
+.btn-back {
+    min-width: 50px !important;
+    padding: 16px !important;
+}
+.icon-logo {
+    border-radius: 25%;
+}
+
+.name-course {
+    margin-left: 12px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
