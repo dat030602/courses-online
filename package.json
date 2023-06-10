@@ -1,7 +1,6 @@
 {
     "name": "courses-online",
     "version": "0.1.0",
-    "homepage": "https://datmap233.github.io/courses-online",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
@@ -43,12 +42,15 @@
     "devDependencies": {
         "@tippyjs/react": "^4.2.6",
         "axios": "^0.27.2",
+        "buffer": "^6.0.3",
         "classnames": "^2.3.1",
         "gh-pages": "^5.0.0",
         "normalize.css": "^8.0.1",
+        "process": "^0.11.10",
         "react-app-rewired": "^2.2.1",
         "react-player": "^2.12.0",
         "react-router-dom": "^6.11.1",
-        "sass": "^1.52.3"
+        "sass": "^1.52.3",
+        "stream-browserify": "^3.0.0"
     }
 }

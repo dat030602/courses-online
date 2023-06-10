@@ -219,11 +219,11 @@ function Course() {
                             <div className={cx('video-show')}>
                                 <iframe
                                     className={cx('video')}
-                                    src="https://www.youtube.com/embed/xI0seilQ6_M"
+                                    src="https://drive.google.com/file/d/1vd8kl4vcBv5xWzyOxJYiU70ncLc3MaNE/preview"
                                     title="YouTube video player"
-                                    frameborder="0"
+                                    frameBorder={0}
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen="true"
+                                    allowFullScreen={true}
                                 ></iframe>
                             </div>
                         </div>
@@ -231,7 +231,7 @@ function Course() {
                 )}
                 <div className={cx('text-full-width')}>Miễn phí</div>
                 <div className={cx('submit', 'mb-32')}>
-                    <Button to="/course/learn" className={cx('btn-submit')}>
+                    <Button to="/course/learn/C000000001" className={cx('btn-submit')}>
                         ĐĂNG KÝ HỌC
                     </Button>
                 </div>

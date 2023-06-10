@@ -2,7 +2,7 @@ const routes = {
     course: '/course',
     courses: '/courses',
     myCourses: '/my-courses',
-    learn: '/course/learn',
+    learn: '/course/learn/:id',
     info: '/:id',
     home: '/',
 };

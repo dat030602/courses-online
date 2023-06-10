@@ -27,8 +27,31 @@
 }
 
 .video-show {
+    position: relative;
     width: 100%;
     height: 80vh;
+    & > .icon-video {
+        height: 36px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        background-color: #ccc;
+        opacity: 0.5;
+        padding: 8px 10px;
+        border-radius: 50%;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    & .play {
+        left: 12px;
+    }
+    & .mute {
+        left: 54px;
+    }
+    & svg {
+        height: 100%;
+    }
 }
 .video {
     width: 100%;

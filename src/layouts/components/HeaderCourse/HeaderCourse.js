@@ -4,21 +4,18 @@ import Button from '~/components/Button/Button';
 import { ArrowIcon, LogoIcon, NotifyIcon, SearchIcon } from '~/components/Icons';
 import Menu from '~/components/Popper/Menu/Menu';
 
-import { useNavigate } from 'react-router-dom';
-
 const cx = classNames.bind(styles);
 
 function HeaderCourse() {
-    const navigate = useNavigate();
     return (
         <header>
             <div className={cx('wrapper', 'grid')}>
                 <div className={cx('navbar')}>
                     <div className={cx('logo')}>
-                        <Button className={cx('btn-back')} onClick={() => navigate(-1)}>
+                        <Button href="/" className={cx('btn-back')}>
                             <ArrowIcon className={cx('icon', 'arrow')} />
                         </Button>
-                        <Button to="/" logo navigate>
+                        <Button to="/" logo navigate="true">
                             <LogoIcon width="4.2rem" height="4.2rem" className={cx('icon-logo')} />
                         </Button>
                         <div className={cx('name-course')}>
