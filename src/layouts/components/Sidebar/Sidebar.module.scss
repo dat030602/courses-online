@@ -19,12 +19,13 @@
     padding: 16px 8px;
     border-radius: 12px;
     width: 100%;
-    &:hover {
+    font-size: 1.4rem;
+        margin-bottom: 10px;
+        &:hover {
         background-color: rgba(204, 204, 204, 0.5);
     }
-    & p{
-        margin-top: 10px;
-        font-size: 1.4rem;
+    & svg {
+        margin-bottom: 10px;
     }
 }
 
@@ -33,4 +34,7 @@
     // padding: 16px;
     // border-radius: 12px;
     // width: 100%;
+}
+.active {
+    background-color: rgba(204, 204, 204, 0.5);
 }

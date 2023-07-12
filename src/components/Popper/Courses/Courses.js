@@ -6,23 +6,31 @@ import styles from './Courses.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Courses({ children }) {
+function Courses({ children, data, title = 'Khoá học đặc biệt', id = '' }) {
     return (
         <>
-            <div className={cx('wrapper')}>
-                <div className={cx('title')}>
-                    <h5>Khoá học đặc biệt</h5>
+            {data !== undefined ? (
+                <div className={cx('wrapper')} id={id}>
+                    <div className={cx('title')}>
+                        <h5>{title}</h5>
+                    </div>
+                    {Object.keys(data).map((el, index) => (
+                        <CourseItem key={index} data={data[index]} />
+                    ))}
                 </div>
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-                <CourseItem />
-            </div>
+            ) : (
+                <>
+                    <div className={cx('wrapper')}>
+                        <div className={cx('title')}>
+                            <h5>{title}</h5>
+                        </div>
+                        <CourseItem />
+                        <CourseItem />
+                        <CourseItem />
+                        <CourseItem />
+                    </div>
+                </>
+            )}
         </>
     );
 }

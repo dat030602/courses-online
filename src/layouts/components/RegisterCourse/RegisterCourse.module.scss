@@ -1,0 +1,128 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+.wrapper {
+    margin-bottom: 40px;
+    & > div {
+        display: flex;
+        width: 100%;
+        padding-left: 5%;
+    }
+    & .grid-3 {
+        padding-right: 5%;
+    }
+    & h2 {
+        font-size: 3rem;
+        line-height: 6rem;
+        font-weight: 600;
+    }
+    & .icon {
+        width: 12.25px;
+        color: var(--primary);
+        margin-right: 8px;
+    }
+    & li,
+    & p,
+    & span,
+    & .stage-title {
+        margin-bottom: 16px;
+    }
+}
+.title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    & p {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+    & h5 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        & + h3 {
+            margin-left: 12px;
+        }
+    }
+    & h3 {
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+}
+.qr-code {
+    & > div:last-child {
+        display: flex;
+        align-items: center;
+    }
+    & img {
+        height: 180px;
+    }
+}
+.price {
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+    & span {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    & .subtitle {
+        font-size: 1.8rem;
+    }
+    & .price-detail {
+        & span {
+            margin-left: 12px;
+            color: var(--black);
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        & > .price-detail-sale {
+            font-size: 1.3rem;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+        & > .price-detail-total {
+            font-size: 2rem;
+        }
+    }
+    & > div:last-child {
+        border-top: 1px solid var(--text-color);
+    }
+}
+.bank-info-item {
+    display: inline-block;
+    width: 50%;
+    padding: 8px 12px;
+    & > div {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background-color: #f2f1f1;
+        padding: 8px 12px;
+    }
+    & .label {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: var(--text-color);
+        margin-bottom: 8px;
+    }
+    & .content {
+        font-size: 1.7rem;
+    }
+}
+.contact {
+    & > div {
+        display: flex;
+        align-items: center;
+    }
+    & .img {
+        padding: 4px 6px;
+        height: 30px;
+        width: fit-content;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: #181821;
+    }
+}

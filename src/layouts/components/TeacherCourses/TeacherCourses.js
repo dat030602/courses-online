@@ -1,5 +1,5 @@
 import ListCourses from '~/components/Popper/Courses';
-import styles from './Courses.module.scss';
+import styles from './TeacherCourses.module.scss';
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { Buffer } from 'buffer';
@@ -25,7 +25,7 @@ function Courses() {
                     return res.json();
                 })
                 .then((data) => {
-                    setData(FilterData(data, 'grade'));
+                    setData(FilterData(data));
                 });
         } catch (err) {
             console.log(err);
@@ -39,21 +39,18 @@ function Courses() {
         <aside className={cx('wrapper', 'grid')}>
             {data !== undefined && (
                 <>
-                    <div>
-                        {Object.keys(data).map((el, index) => (
-                            <div className={cx('btn')} key={index}>
-                                <Button
-                                    href={`#${data[index][0].id}`}
-                                    key={index}
-                                >{`Lớp ${data[index][0].grade}`}</Button>
-                            </div>
-                        ))}
-                    </div>
+                    {Object.keys(data).map((el, index) => (
+                        <div className={cx('btn')} key={index}>
+                            <Button href={`#${data[index][0].id}`} key={index}>{`${data[index].sex ? 'Thầy' : 'Cô'} ${
+                                data[index][0].nameteacher
+                            }`}</Button>
+                        </div>
+                    ))}
                     {Object.keys(data).map((el, index) => (
                         <div className={cx('grid-full-width')} key={index}>
                             <ListCourses
                                 data={data[index]}
-                                title={`Lớp ${data[index][0].grade}`}
+                                title={`${data[index].sex ? 'Thầy' : 'Cô'} ${data[index][0].nameteacher}`}
                                 id={data[index][0].id}
                             />
                         </div>
