@@ -5,55 +5,23 @@ import Button from '~/components/Button/Button';
 
 const cx = classNames.bind(styles);
 
-function Sidebar() {
-    const handleOnclick = (e) => {
-        const btn = document.querySelectorAll(`.${cx('btn-sidebar')}`);
-        for (let index = 0; index < btn.length; index++) {
-            const element = btn[index];
-            element.classList.remove(cx('active'));
-        }
-        e.target.classList.add(cx('active'));
-    };
+function Sidebar({ curPage = '' }) {
     return (
         <aside className={cx('wrapper')}>
             <div className={cx('sidebar')}>
-                <Button
-                    className={cx('btn-sidebar', 'active')}
-                    to="/"
-                    onClick={(e) => {
-                        handleOnclick(e);
-                    }}
-                >
+                <Button className={cx('btn-sidebar', curPage === '' ? 'active' : '')} to="/">
                     <HomeIcon className={cx('icon')} />
                     Trang chủ
                 </Button>
-                <Button
-                    className={cx('btn-sidebar')}
-                    to="/courses"
-                    onClick={(e) => {
-                        handleOnclick(e);
-                    }}
-                >
+                <Button className={cx('btn-sidebar', curPage === 'courses' ? 'active' : '')} to="/courses">
                     <RoadIcon className={cx('icon')} />
                     Khoá học
                 </Button>
-                <Button
-                    className={cx('btn-sidebar')}
-                    to="/teacher-courses"
-                    onClick={(e) => {
-                        handleOnclick(e);
-                    }}
-                >
+                <Button className={cx('btn-sidebar', curPage === 'teacher' ? 'active' : '')} to="/teacher-courses">
                     <LightIcon className={cx('icon')} />
                     Giáo viên
                 </Button>
-                <Button
-                    className={cx('btn-sidebar')}
-                    to="/"
-                    onClick={(e) => {
-                        handleOnclick(e);
-                    }}
-                >
+                <Button className={cx('btn-sidebar', curPage === 'blog' ? 'active' : '')} to="/blog">
                     <BlogIcon className={cx('icon')} />
                     Blog
                 </Button>

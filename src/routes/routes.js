@@ -10,6 +10,7 @@ import InfoPage from '~/pages/Info';
 import LearnCoursePage from '~/pages/LearnCourse';
 import TeacherCoursesPage from '~/pages/TeacherCourses';
 import RegisterCoursePage from '~/pages/RegisterCourse';
+import BlogPage from '~/pages/Blog';
 
 const publicRoutes = [
     { path: config.routes.home, components: HomePage },
@@ -20,6 +21,7 @@ const publicRoutes = [
     { path: config.routes.myCourses, components: MyCoursesPage },
     { path: config.routes.info, components: InfoPage },
     { path: config.routes.learn, components: LearnCoursePage, layout: Course },
+    { path: config.routes.blog, components: BlogPage },
 ];
 const privateRoutes = [];
 

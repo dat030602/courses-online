@@ -319,3 +319,54 @@ export const VolumeIcon = ({ className }) => (
         <path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z" />
     </svg>
 );
+export const LoveIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className={className}>
+        <defs>
+            <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                <stop offset="0%" stopColor="#FF6680" />
+                <stop offset="100%" stopColor="#E61739" />
+            </linearGradient>
+            <filter id="c" width="118.8%" height="118.8%" x="-9.4%" y="-9.4%" filterUnits="objectBoundingBox">
+                <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1" />
+                <feOffset dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1" />
+                <feComposite
+                    in="shadowOffsetInner1"
+                    in2="SourceAlpha"
+                    k2="-1"
+                    k3="1"
+                    operator="arithmetic"
+                    result="shadowInnerInner1"
+                />
+                <feColorMatrix
+                    in="shadowInnerInner1"
+                    values="0 0 0 0 0.710144928 0 0 0 0 0 0 0 0 0 0.117780134 0 0 0 0.349786932 0"
+                />
+            </filter>
+            <path id="b" d="M8 0a8 8 0 100 16A8 8 0 008 0z" />
+        </defs>
+        <g fill="none">
+            <use fill="url(#a)" href="#b" />
+            <use fill="black" filter="url(#c)" href="#b" />
+            <path
+                fill="white"
+                d="M10.473 4C8.275 4 8 5.824 8 5.824S7.726 4 5.528 4c-2.114 0-2.73 2.222-2.472 3.41C3.736 10.55 8 12.75 8 12.75s4.265-2.2 4.945-5.34c.257-1.188-.36-3.41-2.472-3.41"
+            />
+        </g>
+    </svg>
+);
+
+export const CommentIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" className={className}>
+        <path d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z" />
+    </svg>
+);
+export const SaveIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" className={className}>
+        <path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z" />
+    </svg>
+);
+export const SavedIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" className={className} fill="#ffd43b">
+        <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+    </svg>
+);

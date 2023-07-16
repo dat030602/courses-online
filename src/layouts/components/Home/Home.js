@@ -6,6 +6,7 @@ import Slide from './Slide';
 import { useEffect, useState } from 'react';
 import { Buffer } from 'buffer';
 import { FilterData } from '~/services';
+import Sidebar from '../Sidebar/Sidebar';
 
 const cx = classNames.bind(styles);
 
@@ -38,15 +39,18 @@ function Home() {
         getCourses();
     }, []);
     return (
-        <aside className={cx('wrapper', 'grid')}>
-            <Slide />
-            {data !== undefined &&
-                Object.keys(data).map((el, index) => (
-                    <div className={cx('grid-full-width')} key={index}>
-                        <Courses data={data[index]} />
-                    </div>
-                ))}
-        </aside>
+        <>
+            <Sidebar />
+            <aside className={cx('wrapper', 'grid')}>
+                <Slide />
+                {data !== undefined &&
+                    Object.keys(data).map((el, index) => (
+                        <div className={cx('grid-full-width')} key={index}>
+                            <Courses data={data[index]} />
+                        </div>
+                    ))}
+            </aside>
+        </>
     );
 }
 

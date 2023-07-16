@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Buffer } from 'buffer';
 import { FilterData } from '~/services';
 import Button from '~/components/Button/Button';
+import Sidebar from '../Sidebar/Sidebar';
 
 const cx = classNames.bind(styles);
 
@@ -36,28 +37,31 @@ function Courses() {
         getCourses();
     }, []);
     return (
-        <aside className={cx('wrapper', 'grid')}>
-            {data !== undefined && (
-                <>
-                    {Object.keys(data).map((el, index) => (
-                        <div className={cx('btn')} key={index}>
-                            <Button href={`#${data[index][0].id}`} key={index}>{`${data[index].sex ? 'Thầy' : 'Cô'} ${
-                                data[index][0].nameteacher
-                            }`}</Button>
-                        </div>
-                    ))}
-                    {Object.keys(data).map((el, index) => (
-                        <div className={cx('grid-full-width')} key={index}>
-                            <ListCourses
-                                data={data[index]}
-                                title={`${data[index].sex ? 'Thầy' : 'Cô'} ${data[index][0].nameteacher}`}
-                                id={data[index][0].id}
-                            />
-                        </div>
-                    ))}
-                </>
-            )}
-        </aside>
+        <>
+            <Sidebar curPage='teacher' />
+            <aside className={cx('wrapper', 'grid')}>
+                {data !== undefined && (
+                    <>
+                        {Object.keys(data).map((el, index) => (
+                            <div className={cx('btn')} key={index}>
+                                <Button href={`#${data[index][0].id}`} key={index}>{`${
+                                    data[index].sex ? 'Thầy' : 'Cô'
+                                } ${data[index][0].nameteacher}`}</Button>
+                            </div>
+                        ))}
+                        {Object.keys(data).map((el, index) => (
+                            <div className={cx('grid-full-width')} key={index}>
+                                <ListCourses
+                                    data={data[index]}
+                                    title={`${data[index].sex ? 'Thầy' : 'Cô'} ${data[index][0].nameteacher}`}
+                                    id={data[index][0].id}
+                                />
+                            </div>
+                        ))}
+                    </>
+                )}
+            </aside>
+        </>
     );
 }
 

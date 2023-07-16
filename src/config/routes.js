@@ -1,4 +1,5 @@
 const routes = {
+    blog: '/blog',
     course: '/course/:id',
     courses: '/courses',
     registerCourse: '/register-course',
